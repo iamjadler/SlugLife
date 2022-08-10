@@ -2,7 +2,7 @@
 	"dialogs": [
 		{
 			"selection": 1,
-			"text": "Have you talked to both of them yet?",
+			"text": "Have you talked to the both of them on the right yet?",
 			"choices": [],
 			"action": 0
 		}

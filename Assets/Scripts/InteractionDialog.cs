@@ -288,6 +288,7 @@ public class InteractionDialog : MonoBehaviour
     {
         allowInteraction = false;
         DeActivate();
+        surveyDialog.DeActivate();
         if ((newSong!=null) && (newSong.isPlaying)) newSong.Stop();
         completionCallback(responseValue);
     }

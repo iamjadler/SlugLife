@@ -68,7 +68,7 @@ public class Me : MonoBehaviour
         if (!inDialog)
         {
             lastGoodPosition = transform.position;
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftAlt))
             {
                 if (Input.GetKey(KeyCode.R))
                 {

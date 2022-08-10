@@ -5,7 +5,7 @@
 			"text": "What's that over by the river? An ID card? Did someone lose their ID card?",
 			"choices": [
 				{
-					"text": "Oh, SHOOT! That's mine! I needed to talk to my roommate, but I can't get back into the room without my ID card. I better go get it.",
+					"text": "Oh, SHOOT! That's mine! I must have dropped it on the way over. I needed to talk to my roommate, but I can't get back into the room without my ID card. I better go get it.",
 					"action": 2
 				}
 			]

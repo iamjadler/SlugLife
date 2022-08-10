@@ -85,7 +85,7 @@ public class SurveyDialog : MonoBehaviour
         }
         for (int i=0; i<qAndA.answers.Count; i++)
         {
-            text += "\n  "+ (i+1) + ") " + qAndA.answers[i] + " (" + (qAndA.results[i]*100+cumsum/2)/cumsum + "%)";
+            text += "\n   " + qAndA.answers[i] + " (" + (qAndA.results[i]*100+cumsum/2)/cumsum + "%)";
         }
         text += "\n\n<i>" + commentary + "</i>";
         surveyText.text = text;
