@@ -1,0 +1,12 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "...What are you looking at me for? I'm just standing here.",
+			"choices": [
+			],
+			"action": 0
+		
+		}
+	]
+}

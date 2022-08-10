@@ -1,0 +1,102 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Ew, is that a slug? You are not taking one step into this cafeteria, buddy.",
+			"choices": [
+				{
+					"text": "I really need to get to something from the cafeteria.",
+					"action": 2
+				},
+				{
+					"text": "c'mon, bro, i really gotta get something from there",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Ew, you sound even worse than that slug right now.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 2,
+			"text": "Huh, it's that important?",
+			"choices": [],
+			"action": 11
+		},
+		{
+			"selection": 11,
+			"text": "RevealResults11 You sound real trustworthy now! I guess more people would trust a sophisticated gent than a fellow bro. Too bad, cuz I've been brushing up on my slang. No cap.",
+			"choices": [],
+			"action": 12
+		},
+		{
+			"selection": 12,
+			"text": "...Ok, but you literally have a slug on your head.",
+			"choices": [
+				{
+					"text": "So you're just not going to let in any animals at all?",
+					"action": 4
+				},
+				{
+					"text": "What if this is my service slug? That's very unfair of you to not let it in.",
+					"action": 6
+				},
+				{
+					"text": "Slug slime is actually very sanitary. No harm will be done.",
+					"action": 8
+				}
+			]
+		},
+		{
+			"selection": 4,
+			"text": "That's not just any animal, that's literally a slimy, disguisting slug. Slime is not allowed in the cafeteria. Sorry, I don't make the rules. Actually, I do. I just made that one.",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "RevealResults21 Looks like your straw man argument doesn't work. That's a shame, it was very tricky.",
+			"choices": [],
+			"action": 12
+		},
+		{
+			"selection": 6,
+			"text": "Yeah, I don't care. Find a service rat or something and maybe I'll consider it. We need some better chefs here.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 7,
+			"text": "RevealResults16 I don't think they feared your cancel attempt, but nice try. Real life is very different than the internet. And, obviously, this is all real.",
+			"choices": [],
+			"action": 12
+		},
+		{
+			"selection": 8,
+			"text": "Don't think for a second I'll believe that. But you seem pitifully desperate, so I'll trust you to be careful, just this once.",
+			"choices": [],
+			"action": 9
+		},
+		{
+			"selection": 9,
+			"text": "RevealResults19 Wow, I was certain they would get mad! It guess humans are slightly more level-headed than I thought. Slugs are actually faster than humans, though. You just can't see it because we're going so fast.",
+			"choices": [],
+			"action": 13
+		},
+		{
+			"selection": 13,
+			"text": "RevealResults21 Looks like the straw man argument wouldn't have worked. That's a shame, exaggerating their own words would be very tricky.",
+			"choices": [],
+			"action": 14
+		},
+		{
+			"selection": 14,
+			"text": "RevealResults16 So they wouldn't have even feared your cancel attempt. Real life is very different than the internet. And, obviously, this is all real.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

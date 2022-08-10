@@ -1,0 +1,46 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "I decree that today is officially Block-your-local-bridge Day. Join me for a good cause.",
+			"choices": [
+				{
+					"text": "What's the cause?",
+					"action": 2
+				},
+				{
+					"text": "Can you move? I'm trying to get my ID card.",
+					"action": 3
+				},
+				{
+					"text": "Maybe you shouldn't do that. It sounds very unproductive.",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "It's to block bridges. Duh.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 3,
+			"text": "Of course not, I'm doing a very important official business. This is clearly far more important than your ID card.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 4,
+			"text": "Hm. Maybe you're right. We have to block every bridge, not just local ones!",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "RevealResults17 You got that human to change their mind! Kind of. It looks like we'd better to stop trying to correct them on that, though. Hey, I have an idea! Remember those statistics on how friends might be able to influence each other to do... questionable things? Let's try convincing their friends first.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

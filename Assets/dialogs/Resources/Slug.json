@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hello. My name is Slug.  What do you think of my name?"
+			"choices": [
+				{
+					"text": "I like it!",
+					"action": 2
+				},
+				{
+					"text": "I've heard better.",
+					"action": 3
+				}
+				{
+					"text": "That name sucks.",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Thank you. It's what slime-mama gave me.",
+			"choices": [],
+			"action": "exit"
+		},
+		{
+			"selection": 3,
+			"text": "Ya.  Not very creative, huh?",
+			"choices": []
+			"action": "exit"
+		},
+		{
+			"selection": 4,
+			"text": "How Wude!  Let's try this again.",
+			"choices": []
+			"action": 1
+		}
+	]
+}

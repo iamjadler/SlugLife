@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Oh, the song ended. ...One more.",
+			"choices": [
+				{
+					"text": "Play that upbeat, happy one again.",
+					"action": 2
+				},
+				{
+					"text": "Play that slow, depressing one again.",
+					"action": 3
+				},
+				{
+					"text": "Play that serious, mad one again.",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "NewSong00 Good choice. This one never fails to lift my spirits.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 3,
+			"text": "NewSong01 Good choice. This one really strikes a chord with me.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 4,
+			"text": "NewSong02 Good choice. This one gets my blood boiling.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

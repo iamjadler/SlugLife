@@ -1,0 +1,30 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "These cookies look so good. I love staring at them.",
+			"choices": [
+				{
+					"text": "Are you going to eat them?",
+					"action": 2
+				},
+				{
+					"text": "Can I have one?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Oh, no. I found them on the floor.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 3,
+			"text": "Sorry, I can't just give them away to anyone who asks. I'd go for something else to look at, though. I've been staring at these for hours.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

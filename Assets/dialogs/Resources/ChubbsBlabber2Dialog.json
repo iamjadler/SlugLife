@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Oh, floor cookie... So sorry for dropping you.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

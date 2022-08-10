@@ -1,0 +1,20 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "...................Um, I think maybe the roommate took it... Maybe.",
+			"choices": [
+				{
+					"text": "Ok...",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "I swear, that's all I know, I think. Oops, didn't realize I was fidgeting that much. Don't mind me.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

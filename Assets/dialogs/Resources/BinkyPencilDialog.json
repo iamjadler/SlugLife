@@ -1,0 +1,30 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Welcome back, dude! Here to finally give me that banana? I mean banana slug.",
+			"choices": [
+				{
+					"text": "Did you see a pencil anywhere around here?",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Did I? Oh, yeah! I saw the pen. I mean pencil. Someone picked it up, the girl in blue. The person wearing all blue picked it up.",
+			"choices": [
+				{
+					"text": "Ok, thanks I guess?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Yup.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

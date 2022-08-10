@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Don't forget, I'm only letting you in once. Each time you enter.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

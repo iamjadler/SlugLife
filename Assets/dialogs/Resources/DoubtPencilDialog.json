@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Did I take someone's pencil? I have no clue what you're talking about. Now I'm even more confused about everything.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

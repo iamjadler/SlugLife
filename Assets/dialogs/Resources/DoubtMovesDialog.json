@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "What is happening. Why are there so many people over by the cliff.",
+			"choices": [
+				{
+					"text": "You should go over there, too.",
+					"action": 2
+				},
+				{
+					"text": "I was just heading over there.",
+					"action": 4
+				},
+				{
+					"text": "No clue.",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "I mean, I don't know. There's someone over by the bridge. ... Why is someone still over by the bridge.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 3,
+			"text": "I'm so lost.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 4,
+			"text": "You too?! I mean, of course, me as well. Off I go. Where everyone else is. Like a normal person yup uh huh.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

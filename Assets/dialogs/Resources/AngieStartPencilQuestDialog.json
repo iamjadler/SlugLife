@@ -1,0 +1,76 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "...Stop staring at me. I'm not even doing anything wrong.",
+			"choices": [
+				{
+					"text": "And I'm not doing anything either.",
+					"action": 2
+				},
+				{
+					"text": "Can you please move over by the cliff?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Yes you are, you're staring at me weirdly.",
+			"choices": [
+				{
+					"text": "Can you please move over by the cliff?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Are you trying to get me to do something bad, huh? Not that I care about that. I'm not budging cuz I'm not gonna let you push me off a cliff.",
+			"choices": [],
+			"action": 4
+		},
+		{
+			"selection": 4,
+			"text": "RevealResults22 I really thought that would be the reason. Looks like it's not the most influential thing to everyone.",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "But actually, there's something I need desperately. I lost my pencil and I have a test coming up. I might just move for you if you can find it for me.",
+			"choices": [
+				{
+					"text": "Do you have any more pencils?",
+					"action": 6
+				},
+				{
+					"text": "The teacher can usually lend you one in class.",
+					"action": 6
+				},
+				{
+					"text": "I can lend you my pencil.",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 6,
+			"text": "This is my unique lucky pencil! Don't insult its power. I can pass no test without it. Also, I've had it since elementary school. What? There's nothing wrong with that.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 7,
+			"text": "RevealResults23 Aw, I think they've bonded with their pencil. Just like how my best friend is a redwood tree.",
+			"choices": [],
+			"action": 8
+		},
+		{
+			"selection": 8,
+			"text": "I think I dropped it somewhere in that area to the right, but I couldn't find it when I searched. Go ask around if anyone saw it.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

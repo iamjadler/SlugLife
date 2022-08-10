@@ -1,0 +1,68 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "What'd they say? Where's my pencil? Did you find it?",
+			"choices": [
+				{
+					"text": "One said the girl in blue took it and the other said it was your roommate.",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Oh. Useless.",
+			"choices": [],
+			"action": 3
+		},
+		{
+			"selection": 3,
+			"text": "RevealResults03 There's a good chance someone remembered wrong. That's a little scary for a courtroom setting. Good thing I'm just a slug!",
+			"choices": [],
+			"action": 4
+		},
+		{
+			"selection": 4,
+			"text": "So is that all you know? Which one took my pencil?",
+			"choices": [
+				{
+					"text": "The blue kid.",
+					"action": 5
+				},
+				{
+					"text": "Your roommate.",
+					"action": 6
+				},
+				{
+					"text": "I don't know, give me more time.",
+					"action": 7
+				}
+			]
+		},
+		{
+			"selection": 5,
+			"text": "Ok, if that's what you think. As long as I get my pencil back.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 7,
+			"text": "I don't have all the time in the world. Hurry up.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 6,
+			"text": "Really? Then I gotta give you my ID card. Don't you dare do something sneaky with it. And maybe teach my roommate a thing or two.",
+			"choices": [],
+			"action": 8
+		},
+		{
+			"selection": 8,
+			"text": "NewImage00 I learned deception cues in my studies, too! Short sentences and speech errors may be signs of a liar, but a long response time and fidgeting are not. I wonder why your pink-haired friend was lying.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

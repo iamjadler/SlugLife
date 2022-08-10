@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Have you talked to both of them yet?",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

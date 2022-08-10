@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "I still have no clue what's happening right now.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

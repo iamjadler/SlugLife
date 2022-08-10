@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hey, you found the cookies I dropped!",
+			"choices": [
+				{
+					"text": "Ew, I'm not letting you eat this.",
+					"action": 2
+				},
+				{
+					"text": "Are you the sheep with the blue shirt?",
+					"action": 3
+				},
+				{
+					"text": "Can you move now?",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Of course I'm not going to eat them... Unlike a certain pink-haired friend of mine.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 3,
+			"text": "No, that's the person up there. Heh heh. Sheep.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 4,
+			"text": "Of course, new bestie! Getting tired of listening to the bridge girl anyways. You even know what she's talking about?",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

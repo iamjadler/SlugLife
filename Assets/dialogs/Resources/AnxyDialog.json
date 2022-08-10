@@ -1,0 +1,12 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hey you! Um, uh... I forgot.",
+			"choices": [
+			],
+			"action": 0
+
+		}
+	]
+}

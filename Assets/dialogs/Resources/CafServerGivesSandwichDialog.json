@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hi, welcome to cafeteria, etc etc what do you want.",
+			"choices": [
+				{
+					"text": "A cookie, please.",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "All out. We got sandwiches, though. Can't even tell the difference. Want one?",
+			"choices": [
+				{
+					"text": "Sure, why not.",
+					"action": 4
+				},
+				{
+					"text": "No, I only need a cookie.",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Your loss.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 4,
+			"text": "Here ya go. And if you upgrade to the ultra deluxe meal plan you can get a super triple layered deluxe sandwich instead. Or maybe just an extra drink, idk.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Huh? Who were you again?",
+			"choices": [
+				{
+					"text": "Did you see a pencil anywhere around here?",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "...I don't remember.",
+			"choices": [
+				{
+					"text": "It shouldn't have been too long ago.",
+					"action": 3
+				},
+				{
+					"text": "Please, this is really important.",
+					"action": 4
+				},
+				{
+					"text": "It's a unique, lucky pencil, so it would stand out.",
+					"action": 8
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Um, uh, I'm thinking back!",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 8,
+			"text": "Uhhh, ok, I'm trying to think of anything that stood out!",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 4,
+			"text": "Ack, it's important?! Let me think...",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "RevealResults02 How convenient! Although this could also mean important things are easier to keep track of, not just recall later... Hey, it worked anyways!",
+			"choices": [],
+			"action": 6
+		},
+		{
+			"selection": 6,
+			"text": "...................Um, I think maybe the roommate took it... Maybe.",
+			"choices": [
+				{
+					"text": "Ok...",
+					"action": 7
+				}
+			]
+		},
+		{
+			"selection": 7,
+			"text": "I swear, that's all I know, I think. Oops, didn't realize I was fidgeting that much. Don't mind me.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

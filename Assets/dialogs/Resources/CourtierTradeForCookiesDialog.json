@@ -1,0 +1,234 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "These cookies look so good. I love staring at them.",
+			"choices": [
+				{
+					"text": "Are you going to eat them?",
+					"action": 2
+				},
+				{
+					"text": "Can I have one?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Oh, no. I found them on the floor.",
+			"choices": [],
+			"action": 1
+		},
+		{
+			"selection": 3,
+			"text": "I could never give my cookies to just anyone. Wait, is that a sandwich you have for me there? Does that mean you want to be more than a just anyone? I'd love for us to get to know each other!",
+			"choices": [
+				{
+					"text": "No, this is my sandwich.",
+					"action": 5
+				},
+				{
+					"text": "What kind of things do you like?",
+					"action": 4
+				},
+				{
+					"text": "Ask me a question first.",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 4,
+			"text": "Hmm, I like all kinds of things. Some things I don't really like, though.",
+			"choices": [
+				{
+					"text": "What does that mean?",
+					"action": 9
+				},
+				{
+					"text": "Ask me a question next.",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 5,
+			"text": "Oh, that's too bad. It's a real nice looking sandwich.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 9,
+			"text": "Well, some things I really enjoy. And there are other things that I really don't.",
+			"choices": [
+				{
+					"text": "Ask me a question next.",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 6,
+			"text": "Ok, how about this. Do you like dogs or cats better?",
+			"choices": [
+				{
+					"text": "Dogs.",
+					"action": 8
+				},
+				{
+					"text": "Cats.",
+					"action": 8
+				}
+			]
+		},
+		{
+			"selection": 7,
+			"text": "RevealResults07 Good thing they didn't get upset! Altough, I don't know if their answer was any better.",
+			"choices": [],
+			"action": 11
+		},
+		{
+			"selection": 8,
+			"text": "Oh. I don't really like them.",
+			"choices": [
+				{
+					"text": "Are you a glass half-empty or half-full person?",
+					"action": 10
+				},
+				{
+					"text": "Do you like pancakes or waffles better?",
+					"action": 10
+				}
+			]
+		},
+		{
+			"selection": 10,
+			"text": "Can I say both? No? Hm... Definitely one of those options, then.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 11,
+			"text": "What else have you got?",
+			"choices": [
+				{
+					"text": "What's your favorite food?",
+					"action": 13
+				},
+				{
+					"text": "What's your favorite book?",
+					"action": 13
+				},
+				{
+					"text": "I don't get you at all.",
+					"action": 12
+				}
+			]
+		},
+		{
+			"selection": 13,
+			"text": "Good question. I like only the best.",
+			"choices": [
+				{
+					"text": "What are your hobbies?",
+					"action": 14
+				},
+				{
+					"text": "What's your dream job?",
+					"action": 14
+				},
+				{
+					"text": "I don't get you at all.",
+					"action": 12
+				}
+			]
+		},
+		{
+			"selection": 14,
+			"text": "This one's easy. Doing something I enjoy.",
+			"choices": [
+				{
+					"text": "What's your greatest fear?",
+					"action": 15
+				},
+				{
+					"text": "Who do you like at this school?",
+					"action": 15
+				},
+				{
+					"text": "I don't get you at all.",
+					"action": 12
+				}
+			]
+		},
+		{
+			"selection": 15,
+			"text": "What? These questions are getting weird.",
+			"choices": [
+
+				{
+					"text": "What's your mother's maiden name?",
+					"action": 16
+				},
+				{
+					"text": "What's your first pet's name?",
+					"action": 16
+				},
+				{
+					"text": "I don't get you at all.",
+					"action": 18
+				}
+			]
+		},
+		{
+			"selection": 16,
+			"text": "I think it started with a... Wait, why are you asking me this?",
+			"choices": [
+
+				{
+					"text": "What's the meaning of life?",
+					"action": 17
+				},
+				{
+					"text": "What's the last digit of pi?",
+					"action": 17
+				},
+				{
+					"text": "I don't get you at all.",
+					"action": 18
+				}
+			]
+		},
+		{
+			"selection": 17,
+			"text": "... I don't think we're getting anywhere.",
+			"choices": [],
+			"action": 11
+		},
+		{
+			"selection": 12,
+			"text": "That's ok, most people don't. I enjoyed our conversation, though!",
+			"choices": [],
+			"action": 19
+		},
+		{
+			"selection": 18,
+			"text": "That's ok, I don't understand you either. I enjoyed our conversation, though!",
+			"choices": [],
+			"action": 19
+		},
+		{
+			"selection": 19,
+			"text": "RevealResults12 It seems you don't even have to understand each other to bond. How sweet!",
+			"choices": [],
+			"action": 20
+		},
+		{
+			"selection": 20,
+			"text": "So about that sandwich... I'll trade you my cookies for it. And you know what? Now that we're acquainted, let me tell you something funny. My friend in the blue shirt always follows wherever the crowd goes. She's like a sheep! It's so fun to watch. Oh, don't tell her I told you that.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

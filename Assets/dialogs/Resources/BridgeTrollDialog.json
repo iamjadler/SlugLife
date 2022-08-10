@@ -1,0 +1,31 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Listen up everyone!",
+			"choices": [
+				{
+					"text": "What is it?",
+					"action": 2
+				},
+				{
+					"text": "Can I cross the bridge?",
+					"action": 3
+				}
+			],
+			"action": 0
+		},
+		{
+			"selection": 2,
+			"text": "Just listen to me! At all times!",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 3,
+			"text": "Can't you see I'm making a very important announcement right now?",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

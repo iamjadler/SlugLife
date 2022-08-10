@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Yo dude!  Who left a banana on the ground over there?  You think it's still good?  I'll eat it if it is.  Go get it for me.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

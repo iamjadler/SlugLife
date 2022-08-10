@@ -1,0 +1,46 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "...",
+			"choices": [
+				{
+					"text": "Hello!",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "NewImage04 ...!",
+			"choices": [
+				{
+					"text": "What does that mean?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "NewImage05 ...",
+			"choices": [],
+			"action": 4
+		},
+		{
+			"selection": 4,
+			"text": "NewImage00 What are you trying to do here?",
+			"choices": [
+				{
+					"text": "I just want to get to know my roommate. She's never talked to me before.",
+					"action": 5
+				}
+			]
+		},
+		{
+			"selection": 5,
+			"text": "Oh, that sounds tricky. You'll both have to communicate in a way that you can understand each other. Maybe I can help with that! ...But I'm too hungry to think about something like that right now. When do I get my red polka-dotted mushroom? A long time ago, I spent a week climbing this huge tree with a great view of the forest. Maybe you could spot something from there.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

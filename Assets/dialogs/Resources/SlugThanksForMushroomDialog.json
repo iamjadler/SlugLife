@@ -1,0 +1,30 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "YES!!! It's such a beautiful mushroom!! Oops, I think that human at the tables rubbed off on me. I've spent weeks searching for this treat and you brought me to it minutes. But we've still been through so much together to get here! It's only fair for me to tell you a little more about myself. Ask me something!",
+			"choices": [
+				{
+					"text": "Are you a boy?",
+					"action": 2
+				},
+				{
+					"text": "Are you a girl?",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Am I a what?? Oh yeah, you humans and your gender. What a funny concept! Us slugs don't have gender. In fact, we have both 'male' and 'female' organs inside us, so we don't even have biological sexes, either.",
+			"choices": [],
+			"action": 3
+		},
+		{
+			"selection": 3,
+			"text": "RevealResults01 I'm happy how I am, but I wonder if us slugs are ever missing out on some unique human experiences.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

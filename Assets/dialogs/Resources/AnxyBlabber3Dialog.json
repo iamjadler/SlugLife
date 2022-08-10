@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "I remember everything now!! ...Nope, forgot it again.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

@@ -1,0 +1,92 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hey! Watch it!  You almost stepped on me!",
+			"choices": [
+				{
+					"text": "OMG! You can talk?",
+					"action": 2
+				},
+				{
+					"text": "I thought I just heard someone say 'You almost stepped on me' ???",
+					"action": 3
+				},
+				{
+					"text": "What in slime-ation is that?",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "<size=80%>Yes I can.  I've been living on this campus for years.  Watching students like you go to and from those fake trees... uhm... oh yeah, BUILDINGS.  So I started doing the same.  Hiding in the corners.  Under desks.  On the ceiling.  And I learned A LOT!  How to speak English.  Math.  Science.  But my favorite subject was sociology, especially in the area of human interaction.  I've become quite an expert in the field.  I mean, I'm an expert even when I'm not in the field... I mean, well you get what I mean.",
+			"choices": [
+				{
+					"text": "That's my least favorite subject. I don't understand human interaction at all.</size>",
+					"action": 5
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "I'm down here!",
+			"choices": [
+				{
+					"text": "OMG! You can talk?",
+					"action": 2
+				},
+				{
+					"text": "What in slime-ation is that?",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 4,
+			"text": "Slime-ation?  I'm a mollusk.  My mucus protects me.  Officially, I'm a banana slug.",
+			"choices": [
+				{
+					"text": "OMG! You can talk?",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 5,
+			"text": "<size=80%>Really?\nHey, I have an idea. I've been craving a red polka-dotted mushroom, but it takes me months to traverse this campus on my foot. You seem to be much more efficient with two. How about you let me hitch a ride, and I'll help you with the social interaction stuff?",
+			"choices": [
+				{
+					"text": "Hitch a ride? That's awful, I don't want your slime all over me!",
+					"action": 7
+				},
+				{
+					"text": "I guess I need to bring you to my friend over there anyways.</size>",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 6,
+			"text": "Cool. And if we find a red polka-dotted mushroom on our travels, I'll give you a kiss!",
+			"choices": [
+				{
+					"text": "Yuck. Not necessary. But I'll think of something you can do for me",
+					"action": 8
+				}
+			]
+		},
+		{
+			"selection": 7,
+			"text": "If you change your mind, I won't have gotten very far.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 8,
+			"text": "Cool. Just bend down a little, and I'll slide right on...",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

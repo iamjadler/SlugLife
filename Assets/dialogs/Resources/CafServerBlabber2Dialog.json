@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Upgrade your meal plan now and you get more meal for your plan. What a deal.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

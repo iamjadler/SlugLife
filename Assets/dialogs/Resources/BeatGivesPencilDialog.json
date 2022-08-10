@@ -1,0 +1,243 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hello. I'm a little busy. Are you here for something?",
+			"choices": [
+				{
+					"text": "Did you take your roommate's pencil?",
+					"action": 2
+				}
+			]
+		},
+
+		{
+			"selection": 2,
+			"text": "Oh. That. Wait, before you say anything, my song just ended. Are you ok with listening to music?",
+			"choices": [
+				{
+					"text": "Yeah, I listen to music all the time.",
+					"action": 22
+				},
+				{
+					"text": "Yeah, I'm ok with you playing music.",
+					"action": 21
+				}
+			]
+		},
+		{
+			"selection": 22,
+			"text": "What are you talking about?",
+			"choices": [],
+			"action": 23
+		},
+		{
+			"selection": 23,
+			"text": "RevealResults15 Oops, I think they meant to ask for permission. Human languages sure are confusing.",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 21,
+			"text": "Good. I'll find you some good songs.",
+			"choices": [],
+			"action": 24
+		},
+		{
+			"selection": 24,
+			"text": "RevealResults15 Yay, I think you interpreted that correctly! Human languages sure are confusing.",
+			"choices": [],
+			"action": 25
+		},
+		{
+			"selection": 25,
+			"text": "You can pick the next one.",
+			"choices": [
+				{
+					"text": "It's your music, you choose.",
+					"action": 3
+				},
+				{
+					"text": "Let's hear my options.",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Sure, I can't complain about that. I was just trying to help the guest get comfortable.",
+			"choices": [],
+			"action": 11
+		},
+		{
+			"selection": 4,
+			"text": "NewSong00 This is the first one.",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "NewSong01 This is the second one.",
+			"choices": [],
+			"action": 6
+		},
+		{
+			"selection": 6,
+			"text": "NewSong02 And this is the third one.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 7,
+			"text": "Which one are you feeling, dear guest?",
+			"choices": [
+				{
+					"text": "Song one.",
+					"action": 8
+				},
+				{
+					"text": "Song two.",
+					"action": 9
+				},
+				{
+					"text": "Song three.",
+					"action": 10
+				},
+				{
+					"text": "Can I hear them again?",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 8,
+			"text": "NewSong00 <size=80%>Ah, I love this one. Now, plead your case. I'm still using this pencil, you know.",
+			"choices": [
+				{
+					"text": "You'd make your roommate really happy if you returned that pencil! I'm sure she'd appreciate it to no end.",
+					"action": 13
+				},
+				{
+					"text": "That was really unfair of you to just take your roommate's pencil without asking. She's probably mad. You should seriously return it now.",
+					"action": 12
+				},
+				{
+					"text": "That pencil is super important to your roommate. You're making her really depressed by not giving it back.</size>",
+					"action": 12
+				}
+			]
+		},
+		{
+			"selection": 9,
+			"text": "NewSong01 <size=80%>Ah, I love this one. Now, plead your case. I'm still using this pencil, you know.",
+			"choices": [
+				{
+					"text": "You'd make your roommate really happy if you returned that pencil! I'm sure she'd appreciate it to no end.",
+					"action": 12
+				},
+				{
+					"text": "That was really unfair of you to just take your roommate's pencil without asking. She's probably mad. You should seriously return it now.",
+					"action": 12
+				},
+				{
+					"text": "That pencil is super important to your roommate. You're making her really depressed by not giving it back.</size>",
+					"action": 13
+				}
+			]
+		},
+		{
+			"selection": 10,
+			"text": "NewSong02 <size=80%>Ah, I love this one. Now, plead your case. I'm still using this pencil, you know.",
+			"choices": [
+				{
+					"text": "You'd make your roommate really happy if you returned that pencil! I'm sure she'd appreciate it to no end.",
+					"action": 12
+				},
+				{
+					"text": "That was really unfair of you to just take your roommate's pencil without asking. She's probably mad. You should seriously return it now.",
+					"action": 13
+				},
+				{
+					"text": "That pencil is super important to your roommate. You're making her really depressed by not giving it back.</size>",
+					"action": 12
+				}
+			]
+		},
+		{
+			"selection": 11,
+			"text": "<size=80%>Now, plead your case. I'm still using this pencil, you know.",
+			"choices": [
+				{
+					"text": "You'd make your roommate really happy if you returned that pencil! I'm sure she'd appreciate it to no end.",
+					"action": 14
+				},
+				{
+					"text": "That was really unfair of you to just take your roommate's pencil without asking. She's probably mad. You should seriously return it now.",
+					"action": 14
+				},
+				{
+					"text": "That pencil is super important to your roommate. You're making her really depressed by not giving it back.</size>",
+					"action": 14
+				}
+			]
+		},
+		{
+			"selection": 14,
+			"text": "Let me think about it. ... Nah. I'm not feeling it.",
+			"choices": [],
+			"action": 15
+		},
+		{
+			"selection": 15,
+			"text": "RevealResults06 It looks like we could really use that music to boost our message.",
+			"choices": [],
+			"action": 25
+		},
+		{
+			"selection": 12,
+			"text": "Let me think about it. ... Nah. I'm not feeling it.",
+			"choices": [],
+			"action": 25
+		},
+		{
+			"selection": 13,
+			"text": "...Yeah. I get where you're coming from.",
+			"choices": [],
+			"action": 16
+		},
+		{
+			"selection": 16,
+			"text": "RevealResults00 Wow, that music made an effect! And it sounds like you understand the moods and tunes well enough.",
+			"choices": [],
+			"action": 17
+		},
+		{
+			"selection": 17,
+			"text": "RevealResults06 Good thing you chose a song, too. Music is a powerful force, huh?",
+			"choices": [],
+			"action": 18
+		},
+		{
+			"selection": 18,
+			"text": "I'm not done with you yet. That pink-haired friend of yours is also a good friend of mine. They were with me when I took that pencil. Did they tell you I had it?",
+			"choices": [
+				{
+					"text": "They told me the cafeteria server took it.",
+					"action": 19
+				}
+			]
+		},
+		{
+			"selection": 19,
+			"text": "RevealResults24 They must have lied to protect their friend from blame, even if it meant the pencil wouldn't get returned. I can't say I agree with that, but it's awfully sweet.",
+			"choices": [],
+			"action": 20
+		},
+		{
+			"selection": 20,
+			"text": "Well. I suppose I should thank them for trying to help me, but for now, take the pencil back. I'll find a new one later. I want to finish this song.",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

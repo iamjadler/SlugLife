@@ -1,0 +1,31 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Look at these nice books. Don't they look so nice?",
+			"choices": [
+				{
+					"text": "Ya.  Nice.",
+					"action": 2
+				},
+				{
+					"text": "What are you reading?",
+					"action": 3
+				}
+			],
+			"action": 0
+		},
+		{
+			"selection": 2,
+			"text": "Exactly.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 3,
+			"text": "Oh, I'm not reading them. Just looking at them.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

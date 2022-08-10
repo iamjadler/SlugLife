@@ -1,0 +1,11 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "The cafeteria is closed right now. Come back in a few minutes and I might change my mind.",
+			"choices": [
+			],
+			"action": 0
+		}
+	]
+}

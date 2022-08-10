@@ -1,0 +1,40 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hi! Can't talk right now, I think the bestie is making an announcement... I think.",
+			"choices": [
+				{
+					"text": "Who's the bestie?",
+					"action": 2
+				},
+				{
+					"text": "How's your day?",
+					"action": 3
+				},
+				{
+					"text": "You think?",
+					"action": 4
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "The kid yelling on the bridge. I just met them today... Don't know their name.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 3,
+			"text": "Did you not hear what I just said? Can't talk right now. Busy. Preoccupied.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 4,
+			"text": ".........Yeah. Pretty sure. Maybe.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

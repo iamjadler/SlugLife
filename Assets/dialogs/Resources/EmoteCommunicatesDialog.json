@@ -1,0 +1,222 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "...",
+			"choices": [
+				{
+					"text": "Hello!",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "NewImage04 ...!",
+			"choices": [
+				{
+					"text": "What does that mean?",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "NewImage05 ...",
+			"choices": [],
+			"action": 4
+		},
+		{
+			"selection": 4,
+			"text": "NewImage00 What are you trying to do here?",
+			"choices": [
+				{
+					"text": "I just want to get to know my roommate. She's never talked to me before.",
+					"action": 5
+				}
+			]
+		},
+		{
+			"selection": 5,
+			"text": "Oh, that sounds tricky. You'll both have to communicate in a way that you can understand each other.",
+			"choices": [
+				{
+					"text": "You're the expert on human interaction. I'm calling in my favor for getting you that mushroom. Can you help me?",
+					"action": 6
+				}
+			]
+		},
+		{
+			"selection": 6,
+			"text": "Of course! I'm still working on eating that delectable fungi, but I'll assist you in any way I can.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 7,
+			"text": "RevealResults13 They can't talk in words, but they still talk in social cues! Try paying attention to body language and you might be able to understand.",
+			"choices": [],
+			"action": 8
+		},
+		{
+			"selection": 8,
+			"text": "NewImage04 ...",
+			"choices": [
+				{
+					"text": "Are you happy I'm talking with you?",
+					"action": 9
+				},
+				{
+					"text": "Am I scaring you?",
+					"action": 10
+				},
+				{
+					"text": "Do you have a crush on me?",
+					"action": 11
+				}
+			]
+		},
+		{
+			"selection": 10,
+			"text": "NewImage05 ...",
+			"choices": [],
+			"action": 8
+		},
+		{
+			"selection": 11,
+			"text": "NewImage02 ...!",
+			"choices": [],
+			"action": 8
+		},
+		{
+			"selection": 9,
+			"text": "NewImage06 ...!!!",
+			"choices": [],
+			"action": 12
+		},
+		{
+			"selection": 12,
+			"text": "NewImage00 That looks like a yes! It's great that they want to chat with you, but they're still too shy to talk.",
+			"choices": [],
+			"action": 13
+		},
+		{
+			"selection": 13,
+			"text": "RevealResults09 By paying attention to your own social cues as well, you can send certain messages. That might help!",
+			"choices": [],
+			"action": 14
+		},
+		{
+			"selection": 14,
+			"text": "NewImage04 ...",
+			"choices": [
+				{
+					"text": "*Talk calmly and softly*",
+					"action": 15
+				},
+				{
+					"text": "*Talk upbeat and confidently*",
+					"action": 15
+				},
+				{
+					"text": "*Smile and leave your arms at your side*",
+					"action": 17
+				},
+				{
+					"text": "*Rest your hands on your hips and make eye contact*",
+					"action": 18
+				}
+			]
+		},
+		{
+			"selection": 15,
+			"text": "NewImage01 .....",
+			"choices": [],
+			"action": 16
+		},
+		{
+			"selection": 16,
+			"text": "RevealResults05 Visual social cues seem more powerful than audible ones. Yet many people barely even notice them. Humans really are funny creatures!",
+			"choices": [],
+			"action": 14
+		},
+		{
+			"selection": 18,
+			"text": "NewImage05 ...!",
+			"choices": [],
+			"action": 19
+		},
+		{
+			"selection": 19,
+			"text": "NewImage00 Putting your hands on your hips signifies aggression and dominance. I don't think your roommate appreciates it very much.",
+			"choices": [],
+			"action": 14
+		},
+		{
+			"selection": 17,
+			"text": "NewImage06 :D !",
+			"choices": [],
+			"action": 20
+		},
+		{
+			"selection": 20,
+			"text": "RevealResults05 Good thing you used visual social cues, 'cause they seem more powerful than audible ones. Yet many people barely even notice them. Humans really are funny creatures!",
+			"choices": [],
+			"action": 21
+		},
+		{
+			"selection": 21,
+			"text": "NewImage01 :) ",
+			"choices": [
+				{
+					"text": "Wanna hear a joke? 'What's red and smells like blue paint?' 'Red paint.'",
+					"action": 23
+				},
+				{
+					"text": "Wanna hear a joke? 'I could totally see myself working at a mirror factory.'",
+					"action": 22
+				}
+			]
+		},
+		{
+			"selection": 22,
+			"text": "NewImage03 ?",
+			"choices": [],
+			"action": 21
+		},
+		{
+			"selection": 23,
+			"text": "NewImage04 !!!",
+			"choices": [],
+			"action": 24
+		},
+		{
+			"selection": 24,
+			"text": "RevealResults20 The ridiculous jokes are just slightly more popular than the thoughtful ones. But I think jokes are always fun.",
+			"choices": [],
+			"action": 25
+		},
+		{
+			"selection": 25,
+			"text": "NewImage01 <size=80%>I...</size>",
+			"choices": [
+				{
+					"text": "Are you going to say something???",
+					"action": 26
+				}
+			]
+		},
+		{
+			"selection": 26,
+			"text": "NewImage04 I...!",
+			"choices": [],
+			"action": 27
+		},
+		{
+			"selection": 27,
+			"text": "I really like your hat!",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

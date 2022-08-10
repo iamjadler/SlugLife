@@ -1,0 +1,118 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "When did all my friends move over there? Don't they know it's still Block-your-local-bridge Day? They should stay here and keep listening to me.",
+			"choices": [
+				{
+					"text": "Or maybe you should go over to them.",
+					"action": 2
+				},
+				{
+					"text": "Wooo! Block-your-local-bridge Day!",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 3,
+			"text": "Yes! I knew someone still cared.",
+			"choices": [],
+			"action": 0
+		},
+		{
+			"selection": 2,
+			"text": "<size=80%>I won't abandon my post that easily! They'll come back. No one can live without hearing me for that long. I don't even know why they're lollygagging over there.",
+			"choices": [
+				{
+					"text": "It's a really popular spot.",
+					"action": 4
+				},
+				{
+					"text": "They all gave up on Block-your-local-bridge Day.",
+					"action": 6
+				},
+				{
+					"text": "They discovered a new species.",
+					"action": 8
+				},
+				{
+					"text": "They saw this really valuable rock at the bottom of the cliff.</size>",
+					"action": 10
+				}
+			]
+		},
+		{
+			"selection": 4,
+			"text": "I bet it pales in comparison to my popularity. No spot can be as loved as the one in front of me.",
+			"choices": [],
+			"action": 5
+		},
+		{
+			"selection": 5,
+			"text": "RevealResults14 Well that didn't work. I guess popularity just isn't as convincing as friendship. Not that I'm compaining, I'm happy to stay uneaten.",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 6,
+			"text": "They could never! And even if they did, I stay loyal to the cause.",
+			"choices": [],
+			"action": 7
+		},
+		{
+			"selection": 7,
+			"text": "RevealResults10 Wow, people are dedicated! That doesn't really work out in our favor, though.",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 8,
+			"text": "Woah, what is it? I bet we can make it on TV for something like that!",
+			"choices": [],
+			"action": 9
+		},
+		{
+			"selection": 9,
+			"text": "RevealResults08 They fell for it! Just like people who don't recognize subliminal messages. I think when they don't know exactly what someone's talking about, they blindly believe it exists. Heh heh.",
+			"choices": [],
+			"action": 12
+		},
+		{
+			"selection": 10,
+			"text": "Hah! I know there's no priceless rocks down there. If there was, I'd be rich and famous by now.",
+			"choices": [],
+			"action": 11
+		},
+		{
+			"selection": 11,
+			"text": "RevealResults18 Oops. It seems like someone trusts their memory if you're lying about something they would easily recognize.",
+			"choices": [],
+			"action": 2
+		},
+		{
+			"selection": 13,
+			"text": "RevealResults10 Looks like they wouldn't have given up even if they thought their friends did. People are dedicated!",
+			"choices": [],
+			"action": 14
+		},
+		{
+			"selection": 12,
+			"text": "RevealResults14 I guess using popularity just wouldn't have been as convincing as friendship. Not that I'm compaining, I'm happy to stay uneaten.",
+			"choices": [],
+			"action": 13
+		},
+		{
+			"selection": 14,
+			"text": "RevealResults18 It seems like someone would trust their memory more if you're lying about something they would easily recognize, like a shiny rock. Good thing this human wasn't an expert on wildlife.",
+			"choices": [],
+			"action": 15
+		},
+		{
+			"selection": 15,
+			"text": "So where's that incredible new discovery? I can't wait til the cameramen show up!",
+			"choices": [],
+			"action": -1
+		}
+	]
+}

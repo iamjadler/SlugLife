@@ -1,0 +1,10 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hello. My name is ... I don't know my name.",
+			"choices": [],
+			"action": 0
+		}
+	]
+}

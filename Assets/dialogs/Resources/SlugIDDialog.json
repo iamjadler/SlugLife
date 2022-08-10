@@ -1,0 +1,21 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "What's that over by the river? An ID card? Did someone lose their ID card?",
+			"choices": [
+				{
+					"text": "Oh, SHOOT! That's mine! I needed to talk to my roommate, but I can't get back into the room without my ID card. I better go get it.",
+					"action": 2
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "Oo, I know this! You can access the beach by crossing the bridge. I'm sure that will be no problem.",
+			"choices": [
+			],
+			"action": 0
+		}
+	]
+}

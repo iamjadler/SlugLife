@@ -1,0 +1,30 @@
+{
+	"dialogs": [
+		{
+			"selection": 1,
+			"text": "Hey, that's not a banana, that's a banana slug... I'd still eat it though. Give it here!",
+			"choices": [
+				{
+					"text": "Uh, no. I think I'll just help my slug friend find that mushroom instead.",
+					"action": 2
+				},
+				{
+					"text": "Sure, why not.",
+					"action": 3
+				}
+			]
+		},
+		{
+			"selection": 2,
+			"text": "RevealResults04 Phew, thank you for not letting me be eaten! These statistics were far too close for my comfort. Since your friend was willing to, I was starting to worry about my own safety...",
+			"choices": [],
+			"action": -1
+		},
+		{
+			"selection": 3,
+			"text": "RevealResults04 NOOOO, please don't let them eat me! These statistics are far too close for my comfort and now I'm starting to worry about my own safety staying with you. too...",
+			"choices": [],
+			"action": -1
+		}
+	]
+}
