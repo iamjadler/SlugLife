@@ -8,16 +8,17 @@ public class Me : MonoBehaviour
     public float moveSpeed;
     private bool inCollision = false;
     private bool inDialog = false;
+    private bool touchMode = false;
     private string currentScene;
     private Animator walkingAnimator;
     private Rigidbody2D rb2d;
-    private Vector2 lastGoodPosition;
     private States states;
     private bool ignoreNextCollision = false;
     private const float bound_buffer = 10;
     private Vector2 lower_bounds;
     private Vector2 upper_bounds;
     private bool performingSceneTransition = false;
+    public bool touchEnabled = false;
     private float scaleFactor = 1.0f;
     private Vector2 normalScale;
     private float normalMoveSpeed;
@@ -62,12 +63,50 @@ public class Me : MonoBehaviour
         return slug;
     }
 
+    enum TouchCommands
+    {
+        None,
+        Left,
+        Right,
+        Up,
+        Down
+    }
+    TouchCommands touchCommand = TouchCommands.None;
+    float neutralDistance = 20f;
+
     // Update is called once per frame
     void FixedUpdate()
     {
         if (!inDialog)
         {
-            lastGoodPosition = transform.position;
+            touchCommand = TouchCommands.None;
+            if ((Input.touchCount > 0) || (Input.GetButton("Fire1")))
+            {
+                Vector2 relativeTouch;
+                touchEnabled = true;
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+                    Debug.Log("" + touch.position + " " + (Vector2)transform.position);
+                    relativeTouch = touch.position - new Vector2(Globals.scene_width, Globals.scene_height) / 2 - (Vector2)transform.position;
+                }
+                else
+                {
+                    relativeTouch = Input.mousePosition - new Vector3(Globals.scene_width, Globals.scene_height)/2 - transform.position;
+                }
+
+                if ( (Mathf.Abs(relativeTouch.x) > Mathf.Abs(relativeTouch.y)) && (Mathf.Abs(relativeTouch.x) > neutralDistance) )
+                {
+                    if (relativeTouch.x <= 0) { touchCommand = TouchCommands.Left; }
+                    else { touchCommand = TouchCommands.Right; }
+                }
+                else if (Mathf.Abs(relativeTouch.y) > neutralDistance )
+                {
+                    if (relativeTouch.y <= 0) { touchCommand = TouchCommands.Down; }
+                    else { touchCommand = TouchCommands.Up; }
+                }
+            }
+
             if (Input.GetKey(KeyCode.LeftAlt))
             {
                 if (Input.GetKey(KeyCode.R))
@@ -80,44 +119,30 @@ public class Me : MonoBehaviour
                     debugWindow.transform.Find("Canvas").gameObject.SetActive(!debugWindow.transform.Find("Canvas").gameObject.activeSelf);
                 }
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) || (touchCommand == TouchCommands.Down))
             {
                 GetComponent<SpriteRenderer>().flipX = false;
-                walkingAnimator.SetTrigger("startWalkingForward");
-                rb2d.velocity = new Vector2(0, -moveSpeed);
+                if (rb2d.velocity == new Vector2(0, -moveSpeed)) walkingAnimator.SetTrigger("startWalkingForward");
+                else rb2d.velocity = new Vector2(0, -moveSpeed);
             }
-            else if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKey(KeyCode.UpArrow) || (touchCommand == TouchCommands.Up))
             {
                 GetComponent<SpriteRenderer>().flipX = false;
-                walkingAnimator.SetTrigger("startWalkingBackward");
-                rb2d.velocity = new Vector2(0, moveSpeed);
+                if (rb2d.velocity == new Vector2(0, moveSpeed)) walkingAnimator.SetTrigger("startWalkingBackward");
+                else rb2d.velocity = new Vector2(0, moveSpeed);
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow) || (touchCommand == TouchCommands.Left))
             {
                 GetComponent<SpriteRenderer>().flipX = false;
-                walkingAnimator.SetTrigger("startWalkingLeft");
-                rb2d.velocity = new Vector2(-moveSpeed, 0);
+                if (rb2d.velocity == new Vector2(-moveSpeed, 0)) walkingAnimator.SetTrigger("startWalkingLeft");
+                else rb2d.velocity = new Vector2(-moveSpeed, 0);
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.RightArrow) || (touchCommand == TouchCommands.Right))
             {
                 GetComponent<SpriteRenderer>().flipX = true;
-                walkingAnimator.SetTrigger("startWalkingRight");
-                rb2d.velocity = new Vector2(moveSpeed, 0);
+                if (rb2d.velocity == new Vector2(moveSpeed, 0)) walkingAnimator.SetTrigger("startWalkingRight");
+                else rb2d.velocity = new Vector2(moveSpeed, 0);
             }
-            //else if (Input.GetKey(KeyCode.S))
-            //{
-            //    // Slug-on-head animation
-            //    GetComponent<Animator>().SetLayerWeight(1, 1.0f);
-            //}
-            //else if (Input.GetKey(KeyCode.M))
-            //{
-            //    // No slug-on-head animation
-            //    GetComponent<Animator>().SetLayerWeight(1, 0.0f);
-            //}
-            //else if (Input.GetKey(KeyCode.L))
-            //{
-            //    Debug.Log("My position: " + transform.position + " " + transform.localPosition);
-            //}
             else
             {
                 walkingAnimator.SetTrigger("stopWalking");

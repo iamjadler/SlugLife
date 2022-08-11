@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using TMPro;
 
 public class Startup : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Startup : MonoBehaviour
     public GameObject me;
 
     public string startScene;
+    public TextMeshProUGUI versionText;
     private bool waitForKeypress = false;
 
     // Start is called before the first frame update
@@ -32,6 +34,8 @@ public class Startup : MonoBehaviour
             // me and slug start as inactive to make sure their awake/start functions aren't called until other components have started.  Make them active now.
             me.SetActive(true);
             slug.SetActive(true);
+
+            versionText.text = "Ver "+Application.version;
 
             me.GetComponent<Me>().PrepareForFirstScene();
 

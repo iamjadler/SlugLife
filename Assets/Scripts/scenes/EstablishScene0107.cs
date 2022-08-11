@@ -28,10 +28,45 @@ public class EstablishScene0107 : EstablishScene
         y_max = treeTrunk.transform.position.y + trunkTranslationLimit;
         climbDownLimit = y_max - trunkTranslationLimit * 0.1f;
     }
+    enum TouchCommands
+    {
+        None,
+        Left,
+        Right,
+        Up,
+        Down
+    }
+    TouchCommands touchCommand = TouchCommands.None;
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        touchCommand = TouchCommands.None;
+        if ((Input.touchCount > 0) || (Input.GetButton("Fire1")))
+        {
+            Vector2 relativeTouch;
+
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                relativeTouch = touch.position - new Vector2(Globals.scene_width, Globals.scene_height) / 2;
+            }
+            else
+            {
+                relativeTouch = Input.mousePosition - new Vector3(Globals.scene_width, Globals.scene_height) / 2;
+            }
+
+            if (Mathf.Abs(relativeTouch.x) > Mathf.Abs(relativeTouch.y))
+            {
+                if (relativeTouch.x <= 0) { touchCommand = TouchCommands.Left; }
+                else { touchCommand = TouchCommands.Right; }
+            }
+            else
+            {
+                if (relativeTouch.y <= 0) { touchCommand = TouchCommands.Down; }
+                else { touchCommand = TouchCommands.Up; }
+            }
+        }
+        if (Input.GetKey(KeyCode.LeftArrow) || (touchCommand == TouchCommands.Left))
         {
             Vector3 pos = treeTrunk.transform.position;
             pos.x += trunkSpeed;
@@ -43,7 +78,7 @@ public class EstablishScene0107 : EstablishScene
                 camera.transform.position = pos;
             }
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || (touchCommand == TouchCommands.Right))
         {
             Vector3 pos = treeTrunk.transform.position;
             pos.x -= trunkSpeed;
@@ -55,7 +90,7 @@ public class EstablishScene0107 : EstablishScene
                 camera.transform.position = pos;
             }
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || (touchCommand == TouchCommands.Down))
         {
             Vector3 pos = treeTrunk.transform.position;
             pos.y += trunkSpeed;
@@ -67,7 +102,7 @@ public class EstablishScene0107 : EstablishScene
                 camera.transform.position = pos;
             }
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || (touchCommand == TouchCommands.Up))
         {
             Vector3 pos = treeTrunk.transform.position;
             pos.y -= trunkSpeed;

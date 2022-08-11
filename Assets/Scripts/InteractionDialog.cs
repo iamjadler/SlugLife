@@ -36,6 +36,7 @@ public class InteractionDialog : MonoBehaviour
     public GameObject interactionImage;
     public GameObject interactionInstructions;
     public List<Sprite> dialogSpriteList;
+    public List<GameObject> choiceButtons;
     private GameObject interactingCharacter;
     private DialogLogic dialogLogic;
     private List<KeyCode> acceptableKeypresses = new();
@@ -48,6 +49,7 @@ public class InteractionDialog : MonoBehaviour
     private List<KeyCode> keypressesThatCantExitDialog = new();
     private AudioSource newSong;
     private bool simpleDialog = false;
+    private string touchString = "";
 
     // Start is called before the first frame update
     void Start()
@@ -79,14 +81,14 @@ public class InteractionDialog : MonoBehaviour
                 skipDialog = false;
                 SetupNextDialog(0);
             }
-            else if ( (Input.GetKeyDown(KeyCode.X)) && ((currentDialog.action > 0) || (acceptableKeypresses.Count > 0)))
+            else if ( (Input.GetKeyDown(KeyCode.X) || (touchString == "Exit")) && ((currentDialog.action > 0) || (acceptableKeypresses.Count > 0)))
             {
                 // user pressed 'X' to quit dialog, AND next action wasn't going to exit anyway
                 AllDone(0);
             }
             else if (acceptableKeypresses.Count == 0)
             {
-                if (Input.anyKeyDown)
+                if (Input.anyKeyDown || (touchString == "Ok"))
                 {
                     if (!HaveAnyOfTheseKeysBeenPressed(keypressesThatCantExitDialog))
                     {
@@ -101,12 +103,17 @@ public class InteractionDialog : MonoBehaviour
                     }
                 }
             }
+            else if (touchString.Length > 0)
+            {
+                SetupNextDialog(int.Parse(touchString));
+            }
             else
             {
                 foreach (int keycode in acceptableKeypresses)
                 {
                     if (Input.GetKeyDown((KeyCode)keycode))
                     {
+                        GameObject.Find("me").GetComponent<Me>().touchEnabled = false;
                         SetupNextDialog(keycode - (int)KeyCode.Alpha0);
                         break;
                     }
@@ -271,6 +278,8 @@ public class InteractionDialog : MonoBehaviour
             acceptableKeypresses.Add((KeyCode)(i + (int)KeyCode.Alpha0));
         }
 
+        SetupChoiceButtons();
+
         if (acceptableKeypresses.Count > 0)
         {
             SetInstructions("Press a number key to select a response.\nPress 'X' to exit.");
@@ -290,7 +299,45 @@ public class InteractionDialog : MonoBehaviour
         DeActivate();
         surveyDialog.DeActivate();
         if ((newSong!=null) && (newSong.isPlaying)) newSong.Stop();
+        StartCoroutine(WaitForNoInput(responseValue));
+    }
+
+    IEnumerator WaitForNoInput(int responseValue)
+    {
+        while (Input.anyKey || (Input.touchCount > 0) )
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
         completionCallback(responseValue);
     }
 
+    void SetupChoiceButtons()
+    {
+        touchString = "";
+        foreach (GameObject button in choiceButtons)
+        {
+            button.SetActive(false);
+        }
+
+        if (GameObject.Find("me").GetComponent<Me>().touchEnabled)
+        {
+            if (acceptableKeypresses.Count == 0)
+            {
+                choiceButtons[choiceButtons.Count - 2].SetActive(true);
+            }
+
+            for (int i = 0; i < acceptableKeypresses.Count; i++)
+            {
+                choiceButtons[i].SetActive(true);
+            }
+
+            choiceButtons[choiceButtons.Count - 1].SetActive(true);
+        }
+    }
+
+    public void HandleButton(TextMeshProUGUI buttonText)
+    {
+        Debug.Log("Button " + buttonText.text);
+        touchString = buttonText.text;
+    }
 }
