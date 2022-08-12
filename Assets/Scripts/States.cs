@@ -163,5 +163,6 @@ public enum AvailableStates
     treeClimbed,
     retrievedMushroom,
     missionCompleted,
+    creditSceneReached,
     veryLastState
 }

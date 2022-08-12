@@ -125,5 +125,7 @@ public class EstablishScene0107 : EstablishScene
         me.SetActive(true);
         me.transform.position = exitTransporter.transform.position;
         me.GetComponent<SpriteRenderer>().sprite = meSprite;
+        // restore animation with slug on head
+        me.GetComponent<Animator>().SetLayerWeight(1, 1.0f);
     }
 }

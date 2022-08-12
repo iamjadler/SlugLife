@@ -19,6 +19,7 @@ public class Me : MonoBehaviour
     private Vector2 upper_bounds;
     private bool performingSceneTransition = false;
     public bool touchEnabled = false;
+    private bool altkeyEnabled = false;
     private float scaleFactor = 1.0f;
     private Vector2 normalScale;
     private float normalMoveSpeed;
@@ -75,6 +76,30 @@ public class Me : MonoBehaviour
     float neutralDistance = 20f;
 
     // Update is called once per frame
+    private void Update()
+    {
+        if (altkeyEnabled)
+        {
+            if (Input.anyKeyDown)
+            {
+                altkeyEnabled = false;
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (moveSpeed > normalMoveSpeed) { moveSpeed = normalMoveSpeed; }
+                else { moveSpeed *= 3; }
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                debugWindow.transform.Find("Canvas").gameObject.SetActive(!debugWindow.transform.Find("Canvas").gameObject.activeSelf);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            altkeyEnabled = true;
+        }
+    }
+
     void FixedUpdate()
     {
         if (!inDialog)
@@ -107,18 +132,6 @@ public class Me : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.LeftAlt))
-            {
-                if (Input.GetKey(KeyCode.R))
-                {
-                    if (moveSpeed > normalMoveSpeed) { moveSpeed = normalMoveSpeed; }
-                    else { moveSpeed *= 3; }
-                }
-                else if (Input.GetKey(KeyCode.D))
-                {
-                    debugWindow.transform.Find("Canvas").gameObject.SetActive(!debugWindow.transform.Find("Canvas").gameObject.activeSelf);
-                }
-            }
             if (Input.GetKey(KeyCode.DownArrow) || (touchCommand == TouchCommands.Down))
             {
                 GetComponent<SpriteRenderer>().flipX = false;
@@ -192,6 +205,7 @@ public class Me : MonoBehaviour
             if (scaleFactor >= 1.0f)
             {
                 inDialog = true;
+                walkingAnimator.SetTrigger("stopWalking");
                 BackOffCollision(collision);
                 collision.gameObject.GetComponent<Character>().StartInteraction(InteractionCompleteCallback);
             }

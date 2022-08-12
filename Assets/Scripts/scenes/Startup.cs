@@ -56,10 +56,11 @@ public class Startup : MonoBehaviour
         SceneManager.LoadScene(startScene);
 
         // jra
-        //for (int i = 0; i < (int)AvailableStates.veryLastState; i++)
+        //for (int i = 0; i < (int)AvailableStates.missionCompleted; i++)
         //{
         //    states.GetComponent<States>().SetState((AvailableStates)i, "1");
         //}
+
 
         GameObject obj = inventoryPrefab.transform.Find("Canvas").gameObject;
         obj.SetActive(true);

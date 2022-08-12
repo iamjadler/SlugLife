@@ -482,6 +482,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 995679810767157396, guid: 0c178969f41c8434a9da7945b4debf8f, type: 3}
+      propertyPath: m_Size.y
+      value: 9.465973
+      objectReference: {fileID: 0}
+    - target: {fileID: 995679810767157396, guid: 0c178969f41c8434a9da7945b4debf8f, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.167986
+      objectReference: {fileID: 0}
     - target: {fileID: 5577823579379248176, guid: 0c178969f41c8434a9da7945b4debf8f, type: 3}
       propertyPath: m_Name
       value: mushroom

@@ -10,5 +10,6 @@ public class EstablishSceneEnd : EstablishScene
         base.Start();
         GameObject obj = GameObject.Find("InventoryContainer").transform.Find("Canvas").gameObject;
         obj.SetActive(false);
+        states.SetState(AvailableStates.creditSceneReached, "1");
     }
 }
