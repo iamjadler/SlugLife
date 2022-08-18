@@ -24,6 +24,7 @@ public class Me : MonoBehaviour
     private Vector2 normalScale;
     private float normalMoveSpeed;
     private GameObject debugWindow;
+    private GameObject hints;
     private GameObject slug;
     private GameObject ignoreWho;
     private AudioSource walkingAudio;
@@ -47,6 +48,7 @@ public class Me : MonoBehaviour
 
         states = GameObject.Find("States").GetComponent<States>();
         debugWindow = GameObject.Find("DebugWindow");
+        hints = GameObject.Find("HintsContainer");
         lower_bounds = new Vector2(-Globals.scene_width / 2 + bound_buffer, -Globals.scene_height / 2 + bound_buffer);
         upper_bounds = new Vector2( Globals.scene_width / 2 - bound_buffer,  Globals.scene_height / 2 - bound_buffer);
 
@@ -97,6 +99,10 @@ public class Me : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             altkeyEnabled = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Slash) || (Input.GetKeyDown(KeyCode.H)))
+        {
+            hints.GetComponent<Hints>().DisplayAllActiveHints(states);
         }
     }
 

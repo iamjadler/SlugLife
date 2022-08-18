@@ -67,7 +67,7 @@ public class Bloopers : MonoBehaviour
     void StartMessySlugDialog()
     {
         string instructions = "Press any key to continue.";
-        string text = "Slug, can't you just eat the mushroom without climbing all over it?";
+        string text = "Slug, can't you just eat the mushroom without getting it all over you?";
         dialog.ShowSimpleDialog(text, instructions, jason, ShowMessySlug);
     }
 

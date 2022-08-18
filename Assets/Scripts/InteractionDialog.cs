@@ -37,7 +37,7 @@ public class InteractionDialog : MonoBehaviour
     public GameObject interactionInstructions;
     public List<Sprite> dialogSpriteList;
     public List<GameObject> choiceButtons;
-    private GameObject interactingCharacter;
+    public Sprite meFrontSprite;
     private DialogLogic dialogLogic;
     private List<KeyCode> acceptableKeypresses = new();
     private Dialog currentDialog;
@@ -50,6 +50,16 @@ public class InteractionDialog : MonoBehaviour
     private AudioSource newSong;
     private bool simpleDialog = false;
     private string touchString = "";
+    private DialogTypes currentDialogType = DialogTypes.noDialog;
+    private Sprite defaultCharacter;
+
+    enum DialogTypes
+    {
+        noDialog,
+        npcDialog,
+        responseDialog,
+        surveyDialog
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -147,6 +157,11 @@ public class InteractionDialog : MonoBehaviour
         interactionImage.GetComponent<Image>().sprite = newCharacterSprite;
     }
 
+    private Sprite GetCharacter()
+    {
+        return interactionImage.GetComponent<Image>().sprite;
+    }
+
     public void SetInstructions(string newInstructions)
     {
         interactionInstructions.GetComponent<TextMeshProUGUI>().text = newInstructions;
@@ -171,7 +186,9 @@ public class InteractionDialog : MonoBehaviour
         dialogLogic = JsonUtility.FromJson<DialogLogic>(jsonString);
         int currentDialogIndex = dialogLogic.dialogs[0].selection;
         currentDialog = dialogLogic.dialogs[currentDialogIndex - 1];
+        defaultCharacter = GetCharacter();
         surveyDialogsAlreadyShown.Clear();
+        currentDialogType = DialogTypes.noDialog;
         SetupNextDialog(-1);
     }
 
@@ -180,15 +197,45 @@ public class InteractionDialog : MonoBehaviour
         allowInteraction = false;
         surveyDialog.DeActivate();
         string dialogText = "";
+        acceptableKeypresses.Clear();
 
         if ((newSong != null) && newSong.isPlaying)
         {
             newSong.Stop();
         }
-
-        if (userInput == 0)
+        if (currentDialogType == DialogTypes.responseDialog)
         {
-            int newDialogIndex = currentDialog.action;
+            //dialogText += "<color=#680606>You: <i>";
+            dialogText += "<color=#a11212>You: <i>";
+            dialogText += currentDialog.choices[userInput - 1].text + "</i></color>\n\n";
+            SetCharacter(defaultCharacter);
+        }
+
+        if ((currentDialogType == DialogTypes.npcDialog) && (currentDialog.choices.Count > 0))
+        {
+            int i = 0;
+            SetCharacter(meFrontSprite);
+            foreach (DialogChoice choice in currentDialog.choices)
+            {
+                i++;
+                dialogText += "<i>\n  " + i + ") " + choice.text + "</i>";
+                acceptableKeypresses.Add((KeyCode)(i + (int)KeyCode.Alpha0));
+            }
+            SetInstructions("Press a number key to select a response.\nPress 'X' to exit.");
+            currentDialogType = DialogTypes.responseDialog;
+        }
+        else if (userInput >= 0)
+        {
+            int newDialogIndex;
+
+            if (currentDialogType == DialogTypes.responseDialog)
+            {
+                newDialogIndex = currentDialog.choices[userInput - 1].action;
+            }
+            else
+            {
+                newDialogIndex = currentDialog.action;
+            }
             if (newDialogIndex <= 0)
             {
                 AllDone(Mathf.Abs(newDialogIndex));
@@ -196,100 +243,69 @@ public class InteractionDialog : MonoBehaviour
             }
             else
             {
-                //currentDialog = dialogLogic.dialogs[newDialogIndex - 1];
-                currentDialog = dialogLogic.dialogs.Find(x => ( x.selection == newDialogIndex) );
-            }
-        }
-        else if (userInput > 0)
-        {
-            dialogText += "<color=\"red\">You: <i>";
-            dialogText += currentDialog.choices[userInput - 1].text + "</i></color>\n\n";
-            int newDialogIndex = currentDialog.choices[userInput - 1].action;
-            if (newDialogIndex == 0)
-            {
-                currentDialog.text = "";
-                currentDialog.choices.Clear();
-            }
-            else
-            {
-                //currentDialog = dialogLogic.dialogs[newDialogIndex - 1];
                 currentDialog = dialogLogic.dialogs.Find(x => (x.selection == newDialogIndex));
             }
-        }
-
-        if (currentDialog.text.StartsWith("RevealResults"))
-        {
-            int index = int.Parse(currentDialog.text[13..15]);
-            if (!surveyDialogsAlreadyShown.Exists(x=>(x==index)))
-            {
-                surveyDialogsAlreadyShown.Add(index);
-                string commentary = currentDialog.text[16..];
-                //collision.gameObject.GetComponent<RandomObject>().RevealSurveyResult(4, InteractionCompleteCallback);
-                surveyDialog.Activate();
-                surveyDialog.SetQAndA(index, commentary);
-            }
-            else
-            {
-                skipDialog = true;
-            }
-        }
-        else if (currentDialog.text.StartsWith("NewImage"))
-        {
-            int spriteIndex = int.Parse(currentDialog.text[8..10]);
-            Debug.Log("NewImage " + spriteIndex);
-            Sprite newSprite = dialogSpriteList[spriteIndex];
-            if (newSprite != null)
-            {
-                Debug.Log("setting new image");
-                SetCharacter(newSprite);
-            }
-            dialogText += currentDialog.text[10..] + "\n";
-        }
-        else if (currentDialog.text.StartsWith("NewSong"))
-        {
-            string songSuffix = currentDialog.text[7..9];
-            Debug.Log("NewSong " + songSuffix);
-            newSong = GameObject.Find("song"+songSuffix).GetComponent<AudioSource>();
-            if (newSong != null)
-            {
-                Debug.Log("starting new song");
-                newSong.Play();
-            }
-            dialogText += currentDialog.text[10..] + "\n";
-        }
-        else if (currentDialog.text.StartsWith("StopSong"))
-        {
-            Debug.Log("StopSong ");
-            newSong.Stop();
-            dialogText += currentDialog.text[9..] + "\n";
-        }
-        else
-        {
-            dialogText += currentDialog.text + "\n";
-        }
-
-        int i = 0;
-        acceptableKeypresses.Clear();
-
-        foreach (DialogChoice choice in currentDialog.choices)
-        {
-            i++;
-            dialogText += "<i>\n  " + i + ") " + choice.text+"</i>";
-            acceptableKeypresses.Add((KeyCode)(i + (int)KeyCode.Alpha0));
-        }
-
-        SetupChoiceButtons();
-
-        if (acceptableKeypresses.Count > 0)
-        {
-            SetInstructions("Press a number key to select a response.\nPress 'X' to exit.");
+            SetInstructions("Press any key to continue.\nPress 'X' to exit.");
+            currentDialogType = DialogTypes.npcDialog;
         }
         else
         {
             SetInstructions("Press any key to continue.\nPress 'X' to exit.");
+            currentDialogType = DialogTypes.npcDialog;
+        }
+
+        if (currentDialogType == DialogTypes.npcDialog)
+        {
+            if (currentDialog.text.StartsWith("RevealResults"))
+            {
+                int index = int.Parse(currentDialog.text[13..15]);
+                if (!surveyDialogsAlreadyShown.Exists(x => (x == index)))
+                {
+                    surveyDialogsAlreadyShown.Add(index);
+                    string commentary = currentDialog.text[16..];
+                    surveyDialog.Activate();
+                    surveyDialog.SetQAndA(index, commentary);
+                }
+                else
+                {
+                    skipDialog = true;
+                }
+                currentDialogType = DialogTypes.surveyDialog;
+            }
+            else if (currentDialog.text.StartsWith("NewImage"))
+            {
+                int spriteIndex = int.Parse(currentDialog.text[8..10]);
+                Sprite newSprite = dialogSpriteList[spriteIndex];
+                if (newSprite != null)
+                {
+                    SetCharacter(newSprite);
+                    defaultCharacter = newSprite;
+                }
+                dialogText += currentDialog.text[10..] + "\n";
+            }
+            else if (currentDialog.text.StartsWith("NewSong"))
+            {
+                string songSuffix = currentDialog.text[7..9];
+                newSong = GameObject.Find("song" + songSuffix).GetComponent<AudioSource>();
+                if (newSong != null)
+                {
+                    newSong.Play();
+                }
+                dialogText += currentDialog.text[10..] + "\n";
+            }
+            else if (currentDialog.text.StartsWith("StopSong"))
+            {
+                newSong.Stop();
+                dialogText += currentDialog.text[9..] + "\n";
+            }
+            else
+            {
+                dialogText += currentDialog.text + "\n";
+            }
         }
 
         SetText(dialogText);
+        SetupChoiceButtons();
         allowInteraction = true;
     }
 
@@ -323,7 +339,7 @@ public class InteractionDialog : MonoBehaviour
         {
             if (acceptableKeypresses.Count == 0)
             {
-                choiceButtons[choiceButtons.Count - 2].SetActive(true);
+                choiceButtons[^2].SetActive(true);
             }
 
             for (int i = 0; i < acceptableKeypresses.Count; i++)
